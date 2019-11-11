@@ -11,3 +11,9 @@ def about_us():
 	return render_template("about_us.html")
 
 
+@app.route("/contact")
+def contact_us():
+	return "Contact Us"
+
+
+	

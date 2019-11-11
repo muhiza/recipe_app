@@ -44,6 +44,9 @@ class ProjectTests(unittest.TestCase):
         self.assertIn(b'Dinner Recipes', response.data)
         self.assertIn(b'Dessert Recipes', response.data)
  
+    def test_about_us_page(self):
+        response = self.app.get('/about_us', follow_redirects=True)
+        self.assertIn(b'Welcome to the Muhiza Family Recipe App!', response.data)
  
 if __name__ == "__main__":
     unittest.main()
